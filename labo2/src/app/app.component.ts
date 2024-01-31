@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -16,6 +17,7 @@ export class AppComponent {
   // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
   // Le constructeur devra être ajouté ici
   // ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+  constructor(public http : HttpClient){}
 
   searchArtist():void{
     this.result = true;
@@ -28,5 +30,6 @@ export class AppComponent {
 
   newSearch():void{
     this.result = false;
+    
   }
 }
